@@ -1,0 +1,30 @@
+
+<p>
+	ТеКсТ
+</p>
+
+<button class="btn">Кнопка</button>
+<script>
+    const btn = document.querySelector('.btn');
+let p = document.querySelector('p');
+
+var str = p.textContent;  
+ 
+function change_register(str) {
+var new_str = "";
+var len = str.length;
+  for (var i = 0; i < len; i++) {
+    if (str[i] === str[i].toLowerCase()) {
+      new_str += str[i].toUpperCase();
+    } else {
+      new_str += str[i].toLowerCase();
+    }
+  }
+  return new_str;
+}
+
+btn.addEventListener('click', function() {
+	p.textContent = change_register(str);
+  console.log('Регистр букв изменён');
+});
+</script>
